@@ -5,7 +5,7 @@
 - [x] Curriculum overview
 - [x] Example problem workflow
 - [x] Problem solving tips
-- [ ] Review git workflow
+- [x] Review git workflow
 
 ### AI Responsibility
 * Do not use automated solutions at this time
@@ -13,44 +13,69 @@
 * Explain concepts and terminology
 * AI can hallucinate
 
-### Curriculum
-* Module 1: Fundamentals (FOCAL) Functions Objects Conditions Arrays Loops
-* Module 2: Networking and TCP
-* Module 3: HTTP and web servers
-* Module 4: Client-side Coding
-* Module 5: SQL and relational databases
-* Module 6: midterm
-* Module 7: React
-* Module 8: Testing React
-* Module 9: Rails
-* Module 10: Finalss
+### Curriculum Overview
 
-### Delivery Methods
-* Lectures
-* Breakouts
-* Assistance Requests (ARs)
-* Office Hours
+- These [slides](https://docs.google.com/presentation/d/1_NWYcPhS6Q3hQKXnh09Eufl7hs45yBLbUBZhWyvqeSc/edit?usp=sharing) contain a high-level overview of the Lighthouse Labs web development program curriculum
 
+### Problem Solving
 
-Challenge:
-Write a program that takes in an unlimited number of command line arguments and prints out the sum of them. If any argument is not a whole number, skip it. Do not support negative numbers.
+> Without requirements or design, programming is the art of adding bugs to an empty text file.
+>
+> -- <cite>Louis Srygley</cite>
 
+* We have a variety of different approaches available to us as problem solvers
+* You will be exposed to these approaches over the course of the bootcamp
 
+### Tips
 
+* Work incrementally, writing and then executing small amounts of code
+  * Break the problem down into a series of smaller (and easier to understand) steps
+  * Small segments of code allow us to more easily see where errors/bugs are in our code
+* Use proper indentation
+  * Indentation helps us to see how our code is nested (eg. which lines of code are inside the function or if statement)
 
+  ```js
+  // no indentation
+  const printArray = function (arr) {
+  arr.forEach(function(element) {
+  console.log(element);
+  });
+  };
+  console.log('All done!');
 
+  // proper indentation
+  const printArray = function (arr) {
+    arr.forEach(function(element) {
+      console.log(element);
+    });
+  };
+  console.log('All done!');
+  ```
 
+* Try to avoid copy/pasting code; type it out for yourself and try to understand what you are typing
+* Errors are your friend
+  * Try to decipher the error message before you Google it
+  * Errors help to show us where we made a mistake and being able to read them is a valuable skill
 
+### Asking For Help
 
+* Remember the 15 minute rule
+* Typical research path: 
+  * **Google** the error message/what you want to accomplish; make sure to add the programming language (eg. JavaScript) to your search term (eg. "remove elements from array javascript")
+  * **StackOverflow** is useful for seeing multiple possible solutions to a problem (DO NOT copy and paste)
+  * **Mozilla Developer Network (MDN)**... read the documentation
 
+### Git Workflow
 
+* To create a git repository in a directory, run `git init`
+* `git status` will show you which files have been changed in the working directory
+* Use `git diff` to see what specifically was changed inside each file
+* To add files to the staging area, use `git add <filename>` or `git add .` to add all changes
+* Commit your changes using `git commit -m 'a meaningful commit message'`
+* Finally, push your code to github using `git push origin master` or `git push origin main`
 
+**NOTE:** This workflow is great for solo coding projects. When you work as part of a team (such as during mid-terms and finals), you will use a more advanced workflow.
 
-
-
-
-
-
-
-
-
+### Useful Links
+- [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
+- [Node Documentation](https://nodejs.org/en/docs/)
