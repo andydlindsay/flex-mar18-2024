@@ -35,4 +35,4 @@ promise
   })
   .catch((err) => {
     console.log('something bad happened', err);
-  })
+  });
