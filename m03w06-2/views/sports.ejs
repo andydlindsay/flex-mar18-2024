@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports!!</title>
+</head>
+<body>
+  <h2>All the sports!</h2>
+
+  <% for (const key in sports) { %>
+    <div>
+      <h2>Name: <%= sports[key].name %></h2>
+      <h3>Number of players: <%= sports[key].numOfPlayers %></h3>
+      <h3>Division: <%= sports[key].division %></h3>
+
+      <form method="POST" action="/sports/<%= key %>/delete">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  <% } %>
+</body>
+</html>
