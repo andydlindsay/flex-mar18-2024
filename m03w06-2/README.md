@@ -8,69 +8,41 @@
 - [x] Using Chrome DevTools to see requests and responses
 - [x] Practice debugging Express
 
-### CRUD
-* create  POST
-* read    GET
-* update  POST
-* delete  POST
+### Express
 
-GET /sports/:id/edit => serve the edit form
-POST /sports/:id/edit
-req.params.id
-req.body.newSportName
+* A framework that lets us create routes and write/include middleware easily
 
-send the form to the browser
-post the completed form to the server
+### CRUD and BREAD
 
-### Resource
-* object
-* sports
+* There are 5 main operations that we can perform on a particular resource (or group of resources)
+  * Create a new resource
+  * Retrieve all of the existing resources
+  * Retrieve a particular resource
+  * Edit a particular resource
+  * Delete a particular resource
 
-```js
-{
-  name: 'tennis',
-  division: 'amateur',
-  durationInMins: 60,
-  numOfPlayers: 2
-},
-{
-  name: 'soccer',
-  division: 'professional',
-  durationInMins: 90,
-  numOfPlayers: 22
-}
-```
+* We use acronyms to help us remember these operations: **CRUD** and **BREAD**
+  * **CRUD**: **C**reate **R**ead **U**pdate **D**elete
+  * **BREAD**: **B**rowse **R**ead **E**dit **A**dd **D**elete
 
+### Routes
 
-url-encoding
-name=squash&numOfPlayers=2&division=professional
-middleware body-parser
-{
-  name: 'squash'
-}
+* A route is made up of a **VERB** and a **PATH**.
+* Verbs: **GET**, **POST**, **PUT**, **PATCH**, **DELETE**
+* Path: `example.com`**/resource**, `example.com`**/resource/:id**
 
-req.body.name
+### Forms vs Anchor Tags
+* Anchor tags (`<a></a>`) only make `GET` requests
+  * Anchor tags are generally used to link between websites or to different pages on the same site
+* Forms can make either `GET` or `POST` requests (specified in the form's `method` attribute)
+  * Forms are used to collect and submit user information
+* If data is being retrieved, use a `GET` request
+* If data is being updated/changed/created, use a `POST` request (therefore, a form)
+  * NOTE: This includes things like buttons to delete a resource (simply wrap the button in a form)
 
-https://www.google.com/search?q=developer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Useful Links
+* [BREAD/CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+* [Express](https://github.com/expressjs/express)
+* [Embedded JavaScript (EJS)](https://github.com/mde/ejs)
+* [Delete Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+* [HTTP Forms](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
