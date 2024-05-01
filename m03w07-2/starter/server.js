@@ -105,6 +105,7 @@ app.post('/register', (req, res) => {
 
   // add the user to the users object
   users[id] = newUser;
+  console.log(users);
 
   // redirect to the login page
   res.redirect('/login');
