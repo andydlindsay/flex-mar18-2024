@@ -51,7 +51,7 @@
 ### Student Suggestion:
 We created an ERD for a fictional solar panel company:
 
-![solar panels and coffee]()
+![solar panels and coffee](https://raw.githubusercontent.com/andydlindsay/flex-mar18-2024/main/m05w11-2/solar-panels-and-coffee-machines.drawio.png)
 
 ### Useful Links
 * [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
