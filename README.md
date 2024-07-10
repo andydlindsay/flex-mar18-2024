@@ -7,3 +7,4 @@
 * [M03W07 - Security & Real World HTTP Servers](/m03w07-2)
 * [M04W08 - Client Side JavaScript & jQuery](/m04w08-2)
 * [M05W11 - Database Design](/m05w11-2)
+* [M07W17 - State Management and Immutable Update Patterns](/m07w17-2)
