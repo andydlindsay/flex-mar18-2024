@@ -5,55 +5,66 @@
 - [x] Install and Configure Cypress
 - [x] Design End-to-End Tests with Cypress
 
-unit testing
-integration testing
-end-to-end testing
-
 ### Jest vs Cypress
-Jest
-* command line test runner (headless)
-* very fast
-* testing assertions
+* Jest
+  * Command line test runner
+  * Based around testing `assertions`
+  * Used for unit and integration testing (mostly)
+* Cypress
+  * Runs its own browser to execute the tests in
+  * Performs operations and interacts with the site the way that a user would (eg. typing into input fields, clicking on buttons)
+  * Used for integration and E2E testing (mostly)
 
-Cypress
-* browser-based test runner
-* extremely slow
-* testing functionality
+### Install and Configure Cypress
+* Cypress can be installed locally to the project (as a dev dependency) or globally on your OS
 
+```bash
+npm install -g cypress
+npm install --save-dev cypress
+```
 
+* Use the `open` command to start Cypress running
 
-browser => itunes => respond with album info
+```bash
+# global installation
+cypress open
 
-browser => cypress => itunes => respond with the album info => send that to the browser
-browser => cypress => respond with hardcoded data
+# local installation
+npx cypress open
+```
 
+* Add a script to `package.json` for a quick way to start Cypress
 
+```json
+"cypress": "cypress open"
+```
 
+```bash
+npm run cypress
+```
 
+* We use the `cypress.config.js` file in the main directory to configure Cypress
 
+```js
+const { defineConfig } = require("cypress");
 
+module.exports = defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:8765',
+    viewportHeight: 1280,
+    viewportWidth: 1200
+  },
+});
+```
 
+* `baseUrl` tells Cypress where our application is hosted and what port it's listening on
+* `viewportWidth` and `viewportHeight` specify the dimensions for Cypress' browser to use
+* Feel free to change the width and height values if developing for a mobile-first site
 
+### Some Old Friends
+* Cypress is built on top of Mocha and uses Chai assertions
+* Cypress comes with jQuery installed (accessible with `Cypress.$();`)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Useful Links
+- [Cypress Docs](https://docs.cypress.io/api/api/table-of-contents.html)
+- [Cypress Best Practices (Official)](https://docs.cypress.io/guides/references/best-practices.html)
