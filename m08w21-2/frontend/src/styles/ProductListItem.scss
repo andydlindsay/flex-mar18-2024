@@ -1,0 +1,9 @@
+$primary: salmon;
+$secondary: purple;
+
+.ProductListItem {
+  border: 2px solid $secondary;
+  border-radius: 15px;
+  color: $primary;
+  margin-bottom: 10px;
+}
