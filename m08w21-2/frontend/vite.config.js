@@ -14,13 +14,3 @@ export default defineConfig({
     }
   },
 })
-
-// export default defineConfig({
-//   server: {
-//     proxy: {
-//       '/': 'http://localhost:5000',
-
-//     },
-//   },
-//   // some other configuration
-// })

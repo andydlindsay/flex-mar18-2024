@@ -1,6 +1,5 @@
 const express = require('express');
 const morgan = require('morgan');
-const cors = require('cors');
 
 const products = require('./data/products');
 
@@ -9,7 +8,6 @@ const port = 5000;
 
 app.use(morgan('dev'));
 app.use(express.json());
-// app.use(cors());
 app.use(express.static('public'));
 
 // GET /products
@@ -34,7 +32,6 @@ app.post('/products', (req, res) => {
   products[id] = newProduct;
   console.log(products);
 
-  // responding???
   res.status(201).json(newProduct);
 });
 
