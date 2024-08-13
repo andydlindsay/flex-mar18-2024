@@ -241,51 +241,6 @@ user[my_key] # nil
 user[my_key.to_sym] # 'bobh'
 ```
 
-### Blocks and Procs
-* Blocks define a chuck of code to be executed
-* They can be defined with do..end or {}
-
-```rb
-dogs = ["Odie", "Lassie", "Dioji"]
-
-dogs.each do |dog|
-  # inside a block
-  puts dog
-end
-
-dogs.each { |dog|
-  # also inside a block
-  puts dog
-}
-```
-
-* Procs are blocks stored in memory
-* This functionality is similar to how callbacks work in JS
-
-```rb
-# proc creation
-do_thing = Proc.new do |dog| 
-  puts dog
-end
-
-# use & to convert a proc to a block
-dogs.each &do_thing
-
-# defining a method that takes a proc
-def my_method(&block)
-  block.call # .call to invoke the block
-end
-
-# methods can also accept blocks "invisibly" and call them using the `yield` keyword
-def my_method
-  yield # invoke the block
-end
-
-# invoke the method and pass the stored proc
-my_method &say_something # w/o parens
-my_method(&say_something) # w/ parens
-```
-
 ### Classes
 * You declare a class in Ruby with the class keyword.
 
