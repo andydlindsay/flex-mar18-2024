@@ -13,3 +13,4 @@
 * [M08W21 - Concluding React](/m08w21-2)
 * [M09W22 - Intro to Ruby](/m09w22-1)
 * [M09W23 - Intro to TypeScript](/m09w23-2)
+* [BREAKOUT - AI Pair Programming](/m09w24-breakout/)
